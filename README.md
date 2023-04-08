@@ -1,3 +1,3 @@
-## IceCream 
+# IceCream 
 
-# Используется сборка: https://github.com/maxdenaro/gulp-maxgraph
+### Используется сборка: https://github.com/maxdenaro/gulp-maxgraph
