@@ -27,12 +27,12 @@
   &:focus {
     outline: none;
     background-color: var(--green-color);
-    color: var(--light-color)
+    color: var(--light-color);
   }
 
-  &:active {
-    color: var(--active-color);
-  }
+  // &:active {
+  //   color: var(--active-color);
+  // }
 
   &:disabled {
     background-color: var(--grey-color);
@@ -41,6 +41,43 @@
 
 .btn:focus svg path {
   transition: all 0.3s ease-in-out;
-  stroke: var(--light-color)
+  stroke: var(--light-color);
+}
+
+.btn-empty {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: fit-content;
+  padding: 11px 33px;
+  border-radius: 10px;
+  border: 2px solid #F8D24E;
+
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  color: var(--black-color);
+  transition: all 0.3s ease-in-out;
+
+  &__svg {
+    margin-left: 7px;
+    width: 12px;
+    height: 12px;
+  }
+
+  @include hover {
+    border-color: var(--green-color);
+  }
+
+  &:focus {
+    outline: none;
+    border-color: var(--green-color);
+    color: var(--light-color);
+  }
+
+  &:disabled {
+    border-color: var(--grey-color);
+  }
 }
 

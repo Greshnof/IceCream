@@ -1,6 +1,13 @@
 .header {
-  background: #000;
   padding-top: 8px;
+
+  &--position {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+  }
 
   &__container {
     justify-content: space-between;

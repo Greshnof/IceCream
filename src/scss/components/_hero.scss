@@ -1,0 +1,152 @@
+.hero {
+  background: #84A278;
+
+  &__container {
+    margin: 0 auto;
+    padding: 0;
+    max-width: var(--container-width);
+    background-image: url('../../img/hero-dots.png');
+    background-position: bottom;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  &__left {
+    grid-column: 5 span;
+  }
+
+  &__title {
+    margin: 0;
+    margin-top: 118px;
+    font-family: var(--second-font);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 38px;
+    line-height: 48px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--light-color);
+  }
+
+  &__products {
+    margin-top: 28px;
+    margin-right: 34px;
+  }
+
+  &__how {
+    position: relative;
+    display: inline-flex;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    color: var(--yellow-color);
+    transition: all 0.3s ease-in-out;
+
+    &::after {
+      position: absolute;
+      content: '';
+      bottom: 0;
+      height: 1px;
+      width: 100%;
+      background: var(--yellow-color);
+      transition: all 0.3s ease-in-out;
+    }
+
+    @include hover {
+      color: var(--green-color);
+
+      &::after {
+        background: var(--green-color);
+      }
+    }
+
+    &:focus {
+      color: var(--light-color);
+
+      &::after {
+        background: var(--light-color);
+      }
+    }
+
+    &:disabled {
+      color: var(--grey-color);
+
+      &::after {
+        background: var(--grey-color);
+      }
+    }
+  }
+
+  &__lorem {
+    display: flex;
+    align-items: center;
+  }
+
+  &__plate {
+    margin-top: 42px;
+  }
+
+  &__text {
+    position: relative;
+    margin: 0;
+    margin-top: 40px;
+    margin-left: 14px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    color: var(--light-color);
+    max-width: 200px;
+
+    &::after {
+      position: absolute;
+      display: block;
+      content: '';
+      bottom: -32px;
+      width: 41px;
+      height: 16px;
+      background-image: url('../../img/white-arrow.svg');
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+
+    }
+  }
+
+  &__right {
+    display: flex;
+    grid-column: 7 / 6 span;
+  }
+
+  &__img {
+    margin-top: 76px;
+  }
+
+  &__list {
+    padding-top: 126px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__number {
+    margin: 0;
+    font-weight: 900;
+    font-size: 46px;
+    line-height: 56px;
+    text-align: right;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--black-color);
+  }
+
+  &__info {
+    margin: 0;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: right;
+    color: var(--light-color);
+  }
+
+}
+
