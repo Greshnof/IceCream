@@ -1,0 +1,104 @@
+.products {
+  padding: 60px 0;
+  background-image: url('../../img/products-bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__title {
+    margin: 0;
+    max-width: 330px;
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 37px;
+    text-align: center;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--black-color);
+
+    span {
+      font-family: var(--second-font);
+      font-weight: 400;
+      font-size: 36px;
+      line-height: 45px;
+      letter-spacing: 0.06em;
+    }
+  }
+
+  &__list {
+    margin-top: calc(120px + 165px);
+    width: 100%;
+  }
+
+  &__item {
+    grid-column: 4 span;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #AEC6A5;
+    box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+    border-radius: 24px;
+
+    &:nth-child(2) {
+      background: #EFD478;
+    }
+
+    &:nth-child(3) {
+      background: #D6936D;
+    }
+  }
+
+  &__img {
+    margin-top: -165px;
+  }
+
+  &__subtitle {
+    margin: 0;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 37px;
+    text-align: center;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--black-color);
+  }
+
+
+  &__info {
+    margin: 0;
+    margin-top: 65px;
+    max-width: 246px;
+    min-height: 147px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 176%;
+    text-align: center;
+    letter-spacing: 0.04em;
+    color: var(--black-color);
+  }
+
+  &__btn {
+    margin: 40px 0;
+    width: 56px;
+    height: 22px;
+    background-image: url('../../img/black-arrow.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: all 0.2s ease-in-out;
+
+    @include hover {
+      background-image: url('../../img/black-arrow-hover.svg');
+    }
+
+    &:focus {
+      outline: none;
+      background-image: url('../../img/black-arrow-focus.svg');
+    }
+  }
+}

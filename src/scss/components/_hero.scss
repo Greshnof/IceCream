@@ -61,6 +61,7 @@
     }
 
     &:focus {
+      outline: none;
       color: var(--light-color);
 
       &::after {
