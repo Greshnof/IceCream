@@ -8,19 +8,30 @@
   gap: 16px;
 
   &__label {
+    width: 100%;
+
+    &::placeholder {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 140%;
+      color: var(--black-color);
+    }
+  }
+
+  &__input {
+    width: 100%;
     padding: 11px 16px;
     font-weight: 400;
     font-size: 14px;
     line-height: 140%;
-    color: #131313;
-
+    color: var(--black-color);
     background: rgba(248, 210, 78, 0.1);
     border: 1px solid #84A178;
     border-radius: 10px;
   }
 
   &__comment {
-    padding-bottom: 42px;
+    padding-bottom: 52px;
   }
 
   &__btn {
@@ -29,3 +40,4 @@
     width: 120px;
   }
 }
+
