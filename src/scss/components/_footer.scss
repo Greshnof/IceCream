@@ -55,14 +55,14 @@
   &__contacts {
     display: flex;
     flex-direction: column;
-    justify-content: end;
+    justify-content: flex-end;
   }
 
   &__list {
     padding-top: 12px;
     padding-bottom: 40px;
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     gap: 30px;
 
     @include tablet {
