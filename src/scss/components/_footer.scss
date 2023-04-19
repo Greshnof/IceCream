@@ -4,6 +4,10 @@
   &__main {
     display: flex;
     justify-content: space-between;
+
+    @include mobile {
+      flex-direction: column;
+    }
   }
 
   &__title {
@@ -23,10 +27,35 @@
       text-transform: uppercase;
       color: var(--light-color);
     }
+
+    @include tablet {
+      font-weight: 700;
+      font-size: 26px;
+      line-height: 32px;
+
+      span {
+        font-size: 48px;
+        line-height: 59px;
+      }
+    }
+
+    @include mobile {
+      max-width: 234px;
+      font-size: 18px;
+      line-height: 22px;
+
+      span {
+        font-size: 34px;
+        line-height: 41px;
+        letter-spacing: 0.04em;
+      }
+    }
   }
 
   &__contacts {
-    //stuff
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
   }
 
   &__list {
@@ -35,6 +64,11 @@
     display: flex;
     justify-content: end;
     gap: 30px;
+
+    @include tablet {
+      padding-top: 32px;
+      padding-bottom: 32px;
+    }
   }
 
   &__link {
@@ -50,6 +84,7 @@
 
 
   &__phone {
+    white-space: nowrap;
     font-weight: 700;
     font-size: 16px;
     line-height: 186%;
@@ -63,6 +98,15 @@
 
     span {
       color: var(--black-color);
+    }
+
+    @include tablet {
+      font-size: 14px;
+    }
+
+    @include mobile {
+      font-size: 12px;
+      text-align: end;
     }
   }
 
@@ -78,5 +122,10 @@
     line-height: 186%;
     letter-spacing: 0.02em;
     color: #7A7A7A;
+
+    @include mobile {
+      margin-top: 40px;
+      padding-bottom: 40px;
+    }
   }
 }

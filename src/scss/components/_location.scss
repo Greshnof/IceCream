@@ -2,12 +2,25 @@
   background: #84A178;
   padding-bottom: 120px;
 
+  @include tablet {
+    padding-bottom: 40px;
+  }
+
   &__list {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 32px;
+
+    @include mobile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
   }
 
   &__item {
+    grid-column: 4 span;
     margin-top: -96px;
     padding: 40px;
     padding-bottom: 36px;
@@ -15,6 +28,18 @@
     border-radius: 24px;
     background: #FFFFFF;
     box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+
+    @include tablet {
+      padding: 24px;
+    }
+
+    @include mobile {
+      margin-top: 0;
+
+      &:first-child {
+        margin-top: -80px;
+      }
+    }
   }
 
   &__type {
@@ -29,6 +54,10 @@
     color: var(--black-color);
     border-radius: 6px;
     background: #F8D24E;
+
+    @include mobile {
+      line-height: 100%;
+    }
   }
 
   &__city {
@@ -39,9 +68,18 @@
     line-height: 186%;
     letter-spacing: 0.04em;
     color: var(--black-color);
+
+    @include tablet {
+      font-size: 14px;
+    }
+
+    @include mobile {
+      font-size: 12px;
+    }
   }
 
   &__address {
+    display: block;
     font-weight: 500;
     font-size: 16px;
     line-height: 183%;
@@ -57,6 +95,15 @@
       outline: none;
       color: var(--green-color);
     }
+
+    @include tablet {
+      font-size: 14px;
+    }
+
+    @include mobile {
+      font-size: 12px;
+      max-width: 212px;
+    }
   }
 
   &__time {
@@ -64,6 +111,7 @@
     margin: 32px 0;
     border-top: 1px solid #E1E1E1;
     border-bottom: 1px solid #E1E1E1;
+
   }
 
   &__day {
@@ -73,6 +121,14 @@
     line-height: 186%;
     letter-spacing: 0.04em;
     color: var(--dark-color);
+
+    @include tablet {
+      font-size: 14px;
+    }
+
+    @include mobile {
+      font-size: 12px;
+    }
   }
 
   &__working {
@@ -85,22 +141,41 @@
     &:nth-child(2) {
       margin-bottom: 12px;
     }
+
+    @include tablet {
+      font-size: 14px;
+    }
+
+    @include mobile {
+      font-size: 12px;
+    }
   }
 
   &__link {
+    display: inline-block;
+    width: 100%;
     font-weight: 500;
     font-size: 16px;
     line-height: 183%;
     color: var(--black-color);
     transition: all 0.3s ease-in-out;
 
+
     @include hover {
-      color: var(--yellow-color);
+      color: var(--green-color);
     }
 
     &:focus {
       outline: none;
-      color: var(--green-color);
+      color: var(--yellow-color);
+    }
+
+    @include tablet {
+      font-size: 14px;
+    }
+
+    @include mobile {
+      font-size: 12px;
     }
   }
 
@@ -110,10 +185,26 @@
     padding-top: 64px;
     display: flex;
     justify-content: center;
+
+    @include mobile {
+      padding-top: 32px;
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
-  &__btn {
+  &__btn1 {
+    width: 196px;
+  }
+
+  &__btn2 {
+    width: 196px;
     margin-left: 16px;
     padding: 10px 44px;
+
+    @include mobile {
+      margin-top: 16px;
+      margin-left: 0;
+    }
   }
 }

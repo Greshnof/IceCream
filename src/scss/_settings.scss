@@ -1,5 +1,6 @@
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 *,
@@ -115,4 +116,5 @@ a {
   display: grid;
   column-gap: var(--offset);
   grid-template-columns: repeat(12, 1fr);
+
 }

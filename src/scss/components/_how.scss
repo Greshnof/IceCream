@@ -3,47 +3,12 @@
   padding-top: 60px;
   padding-bottom: 180px;
 
-  &__swiper {
-    margin-top: -94px;
-  }
+  &__container {
 
-  &__slide{
-    display: flex;
-    justify-content: center;
-  }
-
-  &__icecream {
-    width: 1012px;
-    height: 422px;
-    border-radius: 24px;
-    //background-image: url('../../img/reviews-img-1.jpg');
-
-    &--1 {
-      width: 1012px;
-      height: 422px;
-      border-radius: 24px;
-      background-image: url('../../img/reviews-img-1.jpg');
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
-
-    &--2 {
-      width: 1012px;
-      height: 422px;
-      border-radius: 24px;
-      background-image: url('../../img/reviews-img-2.jpg');
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
-
-    &--3 {
-      width: 1012px;
-      height: 422px;
-      border-radius: 24px;
-      background-image: url('../../img/reviews-img-3.jpg');
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
+    @include mobile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
   }
 
@@ -67,11 +32,31 @@
       letter-spacing: 0.06em;
       text-transform: uppercase;
     }
+
+    @include tablet {
+      font-size: 22px;
+      line-height: 27px;
+
+      span {
+        font-size: 34px;
+        line-height: 43px;
+      }
+    }
   }
 
   &__img {
     grid-column: 6 span;
     padding-top: 82px;
+
+    @include tablet {
+      grid-column: 5 span;
+      max-width: 336px;
+      max-height: 446px;
+    }
+
+    @include mobile {
+      padding-top: 32px;
+    }
   }
 
   &__text {
@@ -93,11 +78,36 @@
         line-height: 176%;
       }
     }
+
+    @include tablet {
+      grid-column: 6 / 7 span;
+      padding-top: 98px;
+      font-size: 12px;
+
+      p {
+        &:first-child {
+          font-size: 12px;
+        }
+      }
+    }
+
+    @include mobile {
+      padding-top: 32px;
+      text-align: center;
+    }
   }
 
   &__btn {
     grid-column: 7 / 2 span;
     margin-top: 48px;
+
+    @include tablet {
+      margin-top: 60px;
+    }
+
+    @include mobile {
+      margin-top: 20px;
+    }
   }
 
   &__list {
@@ -106,6 +116,13 @@
     display: grid;
     column-gap: var(--offset);
     grid-template-columns: repeat(12, 1fr);
+
+    @include mobile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 28px;
+    }
   }
 
   &__item {
@@ -129,6 +146,11 @@
     letter-spacing: 0.04em;
     text-transform: uppercase;
     color: var(--light-color);
+
+    @include tablet {
+      font-size: 48px;
+      line-height: 59px;
+    }
   }
 
   &__info {
@@ -139,6 +161,55 @@
     text-align: center;
     letter-spacing: 0.02em;
     color: var(--light-color);
+
+    @include tablet {
+      font-size: 14px;
+      line-height: 174%;
+    }
+  }
+
+  &__swiper {
+    margin-top: -94px;
+  }
+
+  &__slide{
+    display: flex;
+    justify-content: center;
+  }
+
+  &__icecream {
+    width: 1012px;
+    height: 422px;
+    border-radius: 24px;
+    margin: 0 32px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    &--1 {
+      background-image: url('../../img/reviews-img-1.jpg');
+    }
+
+    &--2 {
+      background-image: url('../../img/reviews-img-2.jpg');
+    }
+
+    &--3 {
+      background-image: url('../../img/reviews-img-3.jpg');
+    }
+
+    @include tablet {
+      height: 327px;
+    }
+
+    @include small-tablet {
+      height: 300px;
+    }
+
+    @include mobile {
+      height: 130px;
+      margin: 0 20px;
+    }
   }
 
 }

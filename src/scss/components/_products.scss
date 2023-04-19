@@ -29,11 +29,31 @@
       line-height: 45px;
       letter-spacing: 0.06em;
     }
+
+    @include tablet {
+      font-size: 22px;
+      line-height: 27px;
+
+      span {
+        font-size: 34px;
+        line-height: 43px;
+      }
+    }
   }
 
   &__list {
     margin-top: calc(120px + 165px);
     width: 100%;
+
+    @include tablet {
+      margin-top: calc(80px + 120px);
+    }
+
+    @include mobile {
+      display: flex;
+      flex-direction: column;
+      gap: 56px;
+    }
   }
 
   &__item {
@@ -52,10 +72,23 @@
     &:nth-child(3) {
       background: #D6936D;
     }
+
+    @include mobile {
+      margin-top: 150px;
+      grid-column: 2 / 10 span;
+
+      &:nth-child(1) {
+        margin-top: 0;
+      }
+    }
   }
 
   &__img {
     margin-top: -165px;
+
+    @include tablet {
+      margin-top: -120px;
+    }
   }
 
   &__subtitle {
@@ -67,6 +100,11 @@
     letter-spacing: 0.04em;
     text-transform: uppercase;
     color: var(--black-color);
+
+    @include tablet {
+      font-size: 22px;
+      line-height: 27px;
+    }
   }
 
 
@@ -81,6 +119,12 @@
     text-align: center;
     letter-spacing: 0.04em;
     color: var(--black-color);
+
+    @include tablet {
+      margin-top: 40px;
+      font-size: 14px;
+      line-height: 176%;
+    }
   }
 
   &__btn {

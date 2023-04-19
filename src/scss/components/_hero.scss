@@ -9,6 +9,21 @@
     background-position: bottom;
     background-size: contain;
     background-repeat: no-repeat;
+
+    @include tablet {
+      background-image: url('../../img/hero-dots-2.png');
+    }
+
+    @include mobile {
+      background-image: url('../../img/hero-dots-3.png');
+    }
+  }
+
+  &__wrapper {
+    @include mobile {
+      display: flex;
+      flex-direction: column;
+    }
   }
 
   &__left {
@@ -26,11 +41,31 @@
     letter-spacing: 0.04em;
     text-transform: uppercase;
     color: var(--light-color);
+
+    @include tablet {
+      max-width: 181px;
+      font-size: 18px;
+      line-height: 23px;
+      span {
+        font-size: 24px;
+        line-height: 13px;
+      }
+    }
   }
 
   &__products {
     margin-top: 28px;
     margin-right: 34px;
+
+    @include tablet {
+      margin-top: 20px;
+      margin-right: 16px;
+      padding: 6px 11px;
+
+      font-weight: 600;
+      font-size: 8px;
+      line-height: 9px;
+    }
   }
 
   &__how {
@@ -76,15 +111,30 @@
         background: var(--grey-color);
       }
     }
+
+    @include tablet {
+      font-size: 8px;
+      line-height: 10px;
+    }
   }
 
   &__lorem {
     display: flex;
     align-items: center;
+
+    @include mobile {
+      display: none;
+    }
   }
 
   &__plate {
     margin-top: 42px;
+
+    @include tablet {
+      margin-bottom: 12px;
+      width: 152px;
+      height: 152px;
+    }
   }
 
   &__text {
@@ -109,24 +159,58 @@
       background-position: center;
       background-size: cover;
       background-repeat: no-repeat;
+    }
 
+    @include tablet {
+      margin-bottom: 42px;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 140%;
     }
   }
 
   &__right {
-    display: flex;
     grid-column: 7 / 6 span;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+
+    @include mobile {
+      display: flex;
+      justify-content: center;
+    }
   }
 
   &__img {
-    margin-top: 76px;
+    grid-column: 4 span;
+    margin-top: auto;
+    object-position: bottom;
+
+    // @include tablet {
+    //   max-width: 270px;
+    //   max-height: 343px;
+    // }
+
+    // @include small-tablet {
+    //   max-width: 200px;
+    //   max-height: 240px;
+    // }
+
+    @include mobile {
+      max-width: 170px;
+      max-height: 219px;
+    }
   }
 
   &__list {
+    grid-column: 1 span;
     padding-top: 126px;
     display: flex;
     flex-direction: column;
     gap: 16px;
+
+    @include mobile {
+      display: none;
+    }
   }
 
   &__number {
@@ -138,6 +222,11 @@
     letter-spacing: 0.04em;
     text-transform: uppercase;
     color: var(--black-color);
+
+    @include tablet {
+      font-size: 28px;
+      line-height: 34px;
+    }
   }
 
   &__info {
@@ -147,7 +236,11 @@
     line-height: 17px;
     text-align: right;
     color: var(--light-color);
-  }
 
+    @include tablet {
+      font-size: 8px;
+      line-height: 10px;
+    }
+  }
 }
 

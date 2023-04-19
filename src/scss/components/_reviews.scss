@@ -7,7 +7,11 @@
 
   &__swiper {
     margin-top: 128px;
-    height: 372px;
+    height: auto;
+
+    @include tablet {
+      margin-top: 68px;
+    }
   }
 
   &__item {
@@ -34,6 +38,22 @@
     line-height: 186%;
     letter-spacing: 0.04em;
     color: var(--light-color);
+
+    @include tablet {
+      max-width: 550px;
+      padding: 28px 80px;
+      font-size: 14px;
+    }
+
+    @include small-tablet {
+      max-width: 300px;
+    }
+
+    @include mobile {
+      padding: 32px;
+      max-width: 210px;
+      font-size: 12px;
+    }
   }
 
   &__info {
@@ -46,10 +66,13 @@
     color: var(--black-color);
   }
 
+  .container {
+    position: relative;
+  }
+
   &__pagination {
+    position: absolute;
     display: flex;
-    margin: 0 auto;
-    //padding-top: 32px;
     justify-content: center;
     gap: 18px;
 
@@ -65,4 +88,19 @@
 
 .swiper-pagination-bullet-active {
   background: #84A178;
+}
+
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+  bottom: -40px;
+}
+.swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic {
+  left: 49%;
+
+  @include small-tablet {
+    left: 48%;
+  }
+}
+
+.swiper-slide {
+  height: 100%;
 }
