@@ -78,6 +78,10 @@
     color: var(--light-color);
     transition: color 0.5s ease-in-out;
 
+    @include tablet {
+      font-size: 14px;
+    }
+
     @include small-tablet {
       font-weight: 700;
       font-size: 48px;
@@ -153,6 +157,12 @@
   }
 
   &--active {
+    position: fixed;
+    top: 32px;
+    right: 32px;
+  }
+
+  @include mobile {
     position: fixed;
     top: 32px;
     right: 32px;

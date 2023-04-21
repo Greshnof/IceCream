@@ -61,9 +61,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    cursor: pointer;
     background: #AEC6A5;
     box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
     border-radius: 24px;
+    transition: all 0.2s ease-in-out;
 
     &:nth-child(2) {
       background: #EFD478;
@@ -73,13 +75,33 @@
       background: #D6936D;
     }
 
+    @include hover {
+      button {
+        background-image: url('../../img/black-arrow-hover.svg');
+      }
+    }
+
+    &:focus {
+      button {
+        outline: none;
+        background-image: url('../../img/black-arrow-focus.svg');
+      }
+    }
+
     @include mobile {
+      margin: 0 50px;
       margin-top: 150px;
+
       grid-column: 2 / 10 span;
 
       &:nth-child(1) {
         margin-top: 0;
       }
+    }
+
+    @media (max-width: 420px) {
+      margin: 0;
+      margin-top: 150px;
     }
   }
 
